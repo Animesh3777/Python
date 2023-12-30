@@ -25,11 +25,11 @@
 
 # *kwargs
 # kwargs used passsing any keyword arguments
-# def display(**kwargs):
-#     for (key,value) in kwargs.items():
-#         print(key,"->",value)
+def display(**kwargs):
+    for (key,value) in kwargs.items():
+        print(key,"->",value)
 
-# display(India="Delhi",Srilanka="Colombo")
+display(India="Delhi",Srilanka="Colombo")
 
 
 
