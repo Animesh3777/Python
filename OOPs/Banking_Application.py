@@ -1,18 +1,9 @@
-# Object is an instanc of class.
-# Synatx to create and Object
-# object name = classname()
-
-# Rule to name a class :-> #pascal case
-# example # HelloWorld
-
 class Atm:
-    #constructor :-> Special function inside the class
     def __init__(self):
         self.pin=""
         self.balance=0 
         self.menu()
-# obj=Atm()
-# print(type(obj))
+
     def menu(self):
         user_input=input("""
         Hi! How can i help you
@@ -23,10 +14,8 @@ class Atm:
         5. Anything else to exit      
         """)
         if user_input=="1":
-            # create pin
             self.create_pin()
         elif user_input=="2":
-            # change pin
             self.change_pin()
         elif user_input=="3":
             self.check_balance()
