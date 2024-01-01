@@ -1,3 +1,5 @@
+# Basic Bank Appliction
+
 class Atm:
     def __init__(self):
         self.pin=""
@@ -19,10 +21,8 @@ class Atm:
             self.change_pin()
         elif user_input=="3":
             self.check_balance()
-            pass
         elif user_input=="4":
-            # withdraw
-            pass
+            self.withdraw()
         else:
             exit()
     
@@ -55,7 +55,24 @@ class Atm:
         else:
             print('try again')
             self.menu()
-        
+    
+    def withdraw(self):
+        user_pin=int(input('enter your pin'))
+        if user_pin==self.pin:
+            amount=int(input('Enter the amount'))
+           
+            if amount<=self.balance:
+                self.balance=self.balance-amount
+                print("withdrawal successfull {}, Your balance is".format(self.balance))
+            else:
+                print('Amount Exceeded')
+             
+        else:
+            print('Incorrect Password')
+            self.menu()
+         
+    
+    
 obj=Atm()
         
         
