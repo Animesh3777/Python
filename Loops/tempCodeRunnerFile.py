@@ -1,0 +1,1 @@
+print("Final sum of even num: ", sum)
